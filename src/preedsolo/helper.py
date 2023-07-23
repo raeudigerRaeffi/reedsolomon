@@ -48,7 +48,8 @@ class Galois_Helper():
     def get_nth_unity_root_of_field(self,n):
         power_of_one = (self.field.characteristic **self.field.degree)-1 #self.get_power_of_field_element(self.field(1))
         if power_of_one % n != 0:
-            raise ValueError("failure in getting nth root") #TODO improve Error message
+            raise ValueError(f"Nth root of unity only exists if field_characteristic^field_degree -1 is divisible by n. "
+                             f"You gave {power_of_one} and {n}")
         return self.field.primitive_element**(power_of_one//n)
     
 
