@@ -1,5 +1,5 @@
 import galois as gl
-from pathos.multiprocessing import ProcessingPool as Pool
+#from pathos.multiprocessing import ProcessingPool as Pool
 from . import helper
 
 class Base_Reed_Solomon():
